@@ -84,7 +84,16 @@ nav{
 .hero-btn{
     margin-bottom:3em;
 }
+.materialboxed{
+    margin: auto;
+}
 
+.collapsible {
+    border-style:none;
+}
+.collapsible-body{
+    border-style:none;
+}
 .hero-img{
     margin-bottom: -6px;
 }
