@@ -2,8 +2,7 @@ const http = require('http');
 const express = require('express');
 const server = express();;
 const bodyParser = require('body-parser');
-const hostname = process.env.IP;
-const port = process.env.PORT;
+const port = 8081;
 
 server.use(express.static('public'))
 server.use(bodyParser.json());
