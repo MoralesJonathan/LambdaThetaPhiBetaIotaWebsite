@@ -1,0 +1,162 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: none;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+#hero .container{
+ position: absolute;
+    top: 50%;
+      left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    
+}
+
+
+#hero{
+    position: relative;
+    top:0;
+    z-index: 9998;
+    height: 100vh;
+    background-image: url("../images/herosample.jpg");
+    background-size: cover;
+}
+
+#aboutparagraph{
+    text-align: center;
+}
+
+#about .header{
+    margin-bottom: 25px;
+}
+#meet{
+    padding-bottom: 25px;
+}
+
+#meet .header{
+    margin-bottom: 50px;
+}
+#contact{
+    padding-bottom: 25px;
+}
+#photos{
+    padding-bottom: 25px;
+}
+#calendar{
+    padding-bottom: 25px;
+}
+.container-wide {
+    padding:0 5% 0 5%;
+}
+
+.hero-heading{
+    color:white;
+    font-size: 4em;
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+}
+
+.hero-subheading{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color:white;
+    font-size: 2em;
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+    margin-top:-3em;
+    margin-bottom:0;
+}
+
+.hero-btn{
+    margin-bottom:3em;
+}
+
+.hero-img{
+    margin-bottom: -6px;
+}
+
+.foot-color{
+    background-color:#48301e!important;
+}
+
+.divider{
+    margin-bottom: 30px
+}
+.bropic{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top:-50px;
+}
+.evensection{
+    padding-top:20px;
+}
+
+.oddsection{
+    padding-top:20px;
+    background-color: #5a3c25;
+}
+
+.oddsection h3{
+    color:white;
+}
+.caption {
+    
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 30px
+}
+.header{
+    font-weight: 300;
+    /*font-family: gotham;*/
+    text-transform: uppercase;
+}
+
+.container .row:last-child {
+    margin-bottom:0;
+}
+#navlogo{
+    max-height: 25px;
+    margin-right: 15px;
+}
+@font-face {
+    font-family: gotham;
+    src: url(fonts/gotham/GOTHAM-LIGHT.TTF);
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-heading{
+        font-size: 2em;
+    }
+    .hero-subheading{
+        font-size: 1.5em;
+    }
+    
+    .card-panel{
+        margin-top:30px;
+    }
+}
+
+@media only screen and (max-width: 730px) and (min-width:601px) {
+    .hero-heading{
+        font-size: 3em;
+    }
+    .hero-subheading{
+        font-size: 2em;
+    }
+}

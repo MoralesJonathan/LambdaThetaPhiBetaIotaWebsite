@@ -1,0 +1,12 @@
+{
+  "name": "FSULambdas",
+  "version": "0.0.1",
+  "description": "Server for FSULambdas page.",
+  "main": "server.js",
+  "repository": "",
+  "author": "Jonathan Morales",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "~3.2.4"
+  }
+}
