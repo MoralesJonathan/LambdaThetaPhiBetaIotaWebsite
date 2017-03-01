@@ -3,7 +3,7 @@ const express = require('express');
 const server = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const port = 8080;
+const port = 8081;
 
 server.use(express.static('public'))
 server.use(bodyParser.json());
