@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const hostname = process.env.IP;
 const port = process.env.PORT;
 
-server.use(express.static('platform'))
+server.use(express.static(__dirname))
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
