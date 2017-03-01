@@ -67,23 +67,24 @@ nav{
 
 .hero-heading{
     color:white;
-    font-size: 4em;
+    font-family: gotham;
+    text-transform: uppercase;
+    font-size: 35px;
     text-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
 }
 
+
 .hero-subheading{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
+    font-family: gotham;
     color:white;
-    font-size: 2em;
+    font-size: 25px;
     text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
-    margin-top:-3em;
-    margin-bottom:0;
+    margin-top:0;
 }
 
 .hero-btn{
-    margin-bottom:3em;
-}
+}
 .materialboxed{
     margin: auto;
 }
@@ -144,28 +145,25 @@ nav{
 }
 @font-face {
     font-family: gotham;
-    src: url(fonts/gotham/GOTHAM-LIGHT.TTF);
+    src: url(/fonts/gotham/GOTHAM-LIGHT.TTF);
     
 }
 
 @media only screen and (max-width: 600px) {
     .hero-heading{
-        font-size: 2em;
+        font-size: 25px;
     }
     .hero-subheading{
-        font-size: 1.5em;
+        font-size: 15px;
     }
     
-    .card-panel{
-        margin-top:30px;
-    }
 }
 
 @media only screen and (max-width: 730px) and (min-width:601px) {
     .hero-heading{
-        font-size: 3em;
+        font-size: 30px;
     }
     .hero-subheading{
-        font-size: 2em;
+        font-size: 20px;
     }
 }

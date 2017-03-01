@@ -1,10 +1,7 @@
 $(function() {
     $(".button-collapse").sideNav();
     $('.modal').modal();
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true
-    });
-    
+    $('.slider').slider({indicators: false});
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
