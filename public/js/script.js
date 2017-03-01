@@ -27,3 +27,12 @@ $(function() {
         }
     });
 });
+
+$('#contact').submit(function(event){
+    console.log("About to send email")
+    event.preventDefault()
+    var subjectStr = $('#first_name').val()+' '+$('#last_name').val()+" - "+$('#email').val();
+    $.post('/sendEmail',{fromEmail:'webmaster',subject:subjectStr,message:$('#textarea1').val()},function(data){
+        alert(data)
+    })
+})
