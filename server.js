@@ -1,6 +1,6 @@
 const http = require('http');
 const express = require('express');
-const server = express();;
+const server = express();
 const bodyParser = require('body-parser');
 const port = 8081;
 
