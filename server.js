@@ -3,7 +3,7 @@ const express = require('express');
 const server = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const port = 8081;
+const port = 8080;
 
 server.use(express.static('public'))
 server.use(bodyParser.json());
@@ -21,7 +21,7 @@ var transporter = nodemailer.createTransport({
 server.post('/sendEmail',function(req, res) {
     transporter.sendMail({
       from: req.body.fromEmail,
-      to: 'webmaster.fsulambdas@gmail.com,vp.fsulambdas@gmail.com, president.fsulambdas@gmail.com',
+      to: 'webmaster.fsulambdas@gmail.com',
       subject: req.body.subject, 
       text: req.body.message, 
       html: '<p>'+req.body.message+'</p>'

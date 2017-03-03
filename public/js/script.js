@@ -1,6 +1,19 @@
 $(function() {
     $(".button-collapse").sideNav();
-    $('.modal').modal();
+     $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        $('#contactform')[0].reset();
+        $('#submitButtonContact').removeClass('disabled');
+      }
+    }
+  );
+      
     $('.slider').slider({indicators: false});
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -29,10 +42,12 @@ $(function() {
 });
 
 $('#contact').submit(function(event){
-    console.log("About to send email")
+    $('#submitButtonContact').addClass('disabled')
     event.preventDefault()
     var subjectStr = $('#first_name').val()+' '+$('#last_name').val()+" - "+$('#email').val();
     $.post('/sendEmail',{fromEmail:'webmaster',subject:subjectStr,message:$('#textarea1').val()},function(data){
-        alert(data)
+        console.log(data);
+        $('#emailModal').modal('open');
+          
     })
 })
