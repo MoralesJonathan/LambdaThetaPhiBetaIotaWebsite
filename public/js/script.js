@@ -41,6 +41,11 @@ $(function() {
     });
 });
 
+
+$('.collapsible-header').click(function(){
+  $(this).children('a.secondary-content').children('i').toggleText('keyboard_arrow_down', 'keyboard_arrow_up');
+})
+
 $('#contact').submit(function(event){
     $('#submitButtonContact').addClass('disabled')
     event.preventDefault()
@@ -48,6 +53,10 @@ $('#contact').submit(function(event){
     $.post('/sendEmail',{fromEmail:'webmaster',subject:subjectStr,message:$('#textarea1').val()},function(data){
         console.log(data);
         $('#emailModal').modal('open');
-          
     })
 })
+$.fn.toggleText = function(t1, t2){
+  if (this.text() == t1) this.text(t2);
+  else                   this.text(t1);
+  return this;
+};
